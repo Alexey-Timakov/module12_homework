@@ -1,7 +1,7 @@
 let powerConsumption = 0;
 
 class ElectroDevices{
-    constructor(control) {
+    constructor(control){
         this.voltage = 220;
         this.location = "home";
     }
@@ -35,7 +35,7 @@ class AudioDevices extends ElectroDevices{
     }
 }
 
-class CookingDevices extends ElectroDevices {
+class CookingDevices extends ElectroDevices{
     constructor(name, power, control){
         super(control);
         this.type = "heating";
