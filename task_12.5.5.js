@@ -1,7 +1,7 @@
 let powerConsumption = 0;
 
 class ElectroDevices{
-    constructor(control){
+    constructor(){ // параметр control в конструкторе не используется, поэтому нет необходимости его объявлять. То же касается дочерних классов
         this.voltage = 220;
         this.location = "home";
     }
@@ -19,8 +19,8 @@ class ElectroDevices{
 }
 
 class AudioDevices extends ElectroDevices{
-    constructor(name, transfer, power, control){
-        super(control);
+    constructor(name, transfer, power){
+        super();
         this.name = name;
         this.powerCons = power;
         this.work = 0;
@@ -36,8 +36,8 @@ class AudioDevices extends ElectroDevices{
 }
 
 class CookingDevices extends ElectroDevices{
-    constructor(name, power, control){
-        super(control);
+    constructor(name, power){
+        super();
         this.type = "heating";
         this.name = name;
         this.powerCons = power;
